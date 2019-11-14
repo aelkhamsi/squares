@@ -36,3 +36,5 @@ The result of the algorithm applied on the dataset **points.txt** composed of 10
 * Try to count a square once and not 4 times.
 
 * Use a binary search tree instead of a hash table. The time complexity of the search in a binary search tree is O(log(n)) in the worst-case. It could be better than the performance of a hash table: the worst-case time for searching is O(n) (all the keys hash to the same slot). We've used a hash table anyway for the its average-case performance that can be O(1).
+
+* Use a multithread approach to speed up the process
