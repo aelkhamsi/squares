@@ -5,6 +5,15 @@ For example:
 * [0, 0][0, 2][2, 0][2, 2] is a valid square.
 
 # Solution
+
+## Commands
+
+if you want to launch the execution:
+```bash
+python3 squares.py
+```
+## Description
+
 The following algorithm propose a solution to this problem. We will proceed as follow:
 1.  Create a Hash Table and insert all the points in it.
 2.  For every pair of points a & b, search in the Hash Table whether the 4 other points forming the vertices of any of the two squares defined by the vertice (a,b) are existing. If so, increment a counter.
