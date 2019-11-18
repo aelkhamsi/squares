@@ -50,30 +50,31 @@ for i in range(len(points)-1):
     for j in range(i+1, len(points)):
         a = points[i]
         b = points[j]
-        trsf_x = b.x - a.x
-        trsf_y = b.y - a.y
+        if (a != b):
+            trsf_x = b.x - a.x
+            trsf_y = b.y - a.y
 
-        #1st square (a, b, p1, p2)
-        p1 = Point(a.x + trsf_y, a.y - trsf_x)
-        p2 = Point(b.x + trsf_y, b.y - trsf_x)
-        if (hashTable.search(p1) and hashTable.search(p2)):
-            cnt+=1
-            if (cnt == 4):
-                cnt=0
-                num_squares += 1
-                consolePrint = "Number of squares: " + str(num_squares) + "..."
-                print (consolePrint, end="\r")
+            #1st square (a, b, p1, p2)
+            p1 = Point(a.x + trsf_y, a.y - trsf_x)
+            p2 = Point(b.x + trsf_y, b.y - trsf_x)
+            if (hashTable.search(p1) and hashTable.search(p2)):
+                cnt+=1
+                if (cnt == 4):
+                    cnt=0
+                    num_squares += 1
+                    consolePrint = "Number of squares: " + str(num_squares) + "..."
+                    print (consolePrint, end="\r")
 
-        #2nd square (a, b, p3, p4)
-        p3 = Point(a.x - trsf_y, a.y + trsf_x)
-        p4 = Point(b.x - trsf_y, b.y + trsf_x)
-        if (hashTable.search(p3) and hashTable.search(p4)):
-            cnt+=1
-            if (cnt == 4):
-                cnt=0
-                num_squares += 1
-                consolePrint = "Number of squares: " + str(num_squares) + "..."
-                print (consolePrint, end="\r")
+            #2nd square (a, b, p3, p4)
+            p3 = Point(a.x - trsf_y, a.y + trsf_x)
+            p4 = Point(b.x - trsf_y, b.y + trsf_x)
+            if (hashTable.search(p3) and hashTable.search(p4)):
+                cnt+=1
+                if (cnt == 4):
+                    cnt=0
+                    num_squares += 1
+                    consolePrint = "Number of squares: " + str(num_squares) + "..."
+                    print (consolePrint, end="\r")
 
 
 end = time.time() - start
