@@ -25,7 +25,7 @@ In this way, a square will be counted 4 times as the number of his vertices. The
 ## Evaluation
 If we suppose that we use a perfect hash function to build the hash table, we can say that the time complexity is O(n²) since the search for the points in the hash table has a time complexity of O(1). Otherwise, the time complexity in the worst-case is O(n³). The space complexity is always O(n). 
 
-The time of execution of this program is **205 seconds** (3 minutes 25 seconds)
+The time of execution of this program (in an intel i5-5300HQ machine) is **205 seconds** (3 minutes 25 seconds)
 
 The result of the algorithm applied on the dataset **points.txt** composed of 10000 points is: **56 squares**.
 
